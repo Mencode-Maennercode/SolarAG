@@ -18,7 +18,7 @@ export default function About() {
             className="w-full lg:w-1/2"
           >
             <div className="relative">
-              <div className="absolute -inset-4 bg-amber-500/20 rounded-3xl blur-2xl z-0" />
+              <div className="absolute -inset-4 bg-lime-500/20 rounded-3xl blur-2xl z-0" />
               <img 
                 src="https://images.unsplash.com/photo-1545320957-ca226073958e?auto=format&fit=crop&w=1200&q=80" 
                 alt="Solar Installation in der Grafschaft" 
@@ -28,7 +28,7 @@ export default function About() {
               {/* Floating Badge */}
               <div className="absolute -bottom-8 -right-8 z-20 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 hidden md:block">
                 <div className="flex items-center gap-4">
-                  <div className="bg-amber-100 p-3 rounded-full text-amber-500">
+                  <div className="bg-lime-100 p-3 rounded-full text-lime-500">
                     <MapPin size={32} />
                   </div>
                   <div>
@@ -48,7 +48,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="w-full lg:w-1/2"
           >
-            <span className="text-amber-500 font-bold tracking-wider uppercase text-sm mb-4 block">
+            <span className="text-lime-500 font-bold tracking-wider uppercase text-sm mb-4 block">
               Aus der Region, für die Region
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-8 leading-tight">
@@ -68,7 +68,7 @@ export default function About() {
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-4">
                   <div className="mt-1">
-                    <CheckCircle2 className="text-amber-500" size={24} />
+                    <CheckCircle2 className="text-lime-500" size={24} />
                   </div>
                   <p className="text-slate-700 font-medium text-lg">{item}</p>
                 </div>

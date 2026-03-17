@@ -22,7 +22,7 @@ export default function SolarCalculator() {
 
       <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
         <h4 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-          <Calculator className="text-amber-500" />
+          <Calculator className="text-lime-500" />
           Ertragsrechner (Schätzung)
         </h4>
 
@@ -38,9 +38,9 @@ export default function SolarCalculator() {
               step="5"
               value={roofSize}
               onChange={(e) => setRoofSize(Number(e.target.value))}
-              className="w-full accent-amber-500"
+              className="w-full accent-lime-500"
             />
-            <div className="text-right font-bold text-amber-500 mt-2">{roofSize} m²</div>
+            <div className="text-right font-bold text-lime-500 mt-2">{roofSize} m²</div>
           </div>
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-2">
@@ -53,9 +53,9 @@ export default function SolarCalculator() {
               step="10"
               value={electricityBill}
               onChange={(e) => setElectricityBill(Number(e.target.value))}
-              className="w-full accent-amber-500"
+              className="w-full accent-lime-500"
             />
-            <div className="text-right font-bold text-amber-500 mt-2">{electricityBill} €</div>
+            <div className="text-right font-bold text-lime-500 mt-2">{electricityBill} €</div>
           </div>
         </div>
 
@@ -63,7 +63,7 @@ export default function SolarCalculator() {
           <div className="bg-white p-4 rounded-xl border border-slate-100 shadow-sm text-center">
             <div className="text-sm text-slate-500 mb-1">Mögliche Anlagengröße</div>
             <div className="text-2xl font-bold text-slate-900 flex items-center justify-center gap-1">
-              <Zap size={20} className="text-amber-500" />
+              <Zap size={20} className="text-lime-500" />
               {estimatedKwp} kWp
             </div>
           </div>
@@ -73,9 +73,9 @@ export default function SolarCalculator() {
               {yearlyProduction} kWh
             </div>
           </div>
-          <div className="bg-amber-50 p-4 rounded-xl border border-amber-100 shadow-sm text-center">
-            <div className="text-sm text-amber-700 mb-1">Ersparnis pro Jahr (ca.)</div>
-            <div className="text-2xl font-bold text-amber-600 flex items-center justify-center gap-1">
+          <div className="bg-lime-50 p-4 rounded-xl border border-lime-100 shadow-sm text-center">
+            <div className="text-sm text-lime-700 mb-1">Ersparnis pro Jahr (ca.)</div>
+            <div className="text-2xl font-bold text-lime-600 flex items-center justify-center gap-1">
               <Euro size={20} />
               {yearlySavings}
             </div>

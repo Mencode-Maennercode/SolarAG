@@ -32,7 +32,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">
-              Ihre <span className="text-amber-500">Energie</span> der Zukunft
+              Ihre <span className="text-lime-500">Energie</span> der Zukunft
             </h1>
             <p className="text-xl md:text-2xl text-slate-200 mb-10 leading-relaxed max-w-2xl mx-auto">
               Maßgeschneiderte Solaranlagen, Batteriespeicher und Wallboxen für 
@@ -48,7 +48,7 @@ export default function Hero() {
           >
             <a
               href="#kontakt"
-              className="bg-amber-500 hover:bg-amber-400 text-white px-8 py-4 rounded-full text-lg font-bold transition-all transform hover:scale-105 shadow-[0_0_40px_rgba(245,158,11,0.3)] flex items-center gap-2 w-full sm:w-auto justify-center"
+              className="bg-lime-500 hover:bg-lime-400 text-white px-8 py-4 rounded-full text-lg font-bold transition-all transform hover:scale-105 shadow-[0_0_40px_rgba(132,204,22,0.3)] flex items-center gap-2 w-full sm:w-auto justify-center"
             >
               Kostenloses Angebot
               <ArrowRight size={20} />
@@ -74,7 +74,7 @@ export default function Hero() {
               { icon: Leaf, text: "100% Nachhaltig" },
             ].map((item, index) => (
               <div key={index} className="flex items-center gap-3 text-white/90 justify-center bg-white/5 backdrop-blur-sm p-4 rounded-2xl border border-white/10">
-                <div className="bg-amber-500/20 p-2 rounded-lg text-amber-500">
+                <div className="bg-lime-500/20 p-2 rounded-lg text-lime-500">
                   <item.icon size={24} />
                 </div>
                 <span className="font-semibold">{item.text}</span>
@@ -96,7 +96,7 @@ export default function Hero() {
           <motion.div
             animate={{ y: [0, 48, 0] }}
             transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
-            className="w-full h-1/2 bg-amber-500 rounded-full"
+            className="w-full h-1/2 bg-lime-500 rounded-full"
           />
         </div>
       </motion.div>

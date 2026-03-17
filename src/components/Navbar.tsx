@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Sun } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,16 +35,15 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link href="#" className="flex items-center gap-2 group">
-          <div className="bg-amber-500 p-2 rounded-lg text-white group-hover:bg-amber-400 transition-colors">
-            <Sun size={24} className="animate-[spin_10s_linear_infinite]" />
+          <div className="relative w-48 h-16 overflow-hidden rounded-2xl group-hover:scale-105 transition-transform">
+            <Image
+              src="/logo_transparent.png"
+              alt="AG Solar GmbH Logo"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
-          <span
-            className={`font-bold text-xl tracking-tight ${
-              isScrolled ? "text-slate-900" : "text-white"
-            }`}
-          >
-            AG Solar GmbH
-          </span>
         </Link>
 
         {/* Desktop Nav */}
@@ -52,7 +52,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className={`font-medium transition-colors hover:text-amber-500 ${
+              className={`font-medium transition-colors hover:text-lime-500 ${
                 isScrolled ? "text-slate-600" : "text-slate-200"
               }`}
             >
@@ -61,7 +61,7 @@ export default function Navbar() {
           ))}
           <Link
             href="#kontakt"
-            className="bg-amber-500 hover:bg-amber-400 text-white px-6 py-2.5 rounded-full font-medium transition-colors shadow-lg shadow-amber-500/30"
+            className="bg-lime-500 hover:bg-lime-400 text-white px-6 py-2.5 rounded-full font-medium transition-colors shadow-lg shadow-lime-500/30"
           >
             Angebot anfordern
           </Link>
@@ -87,7 +87,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-slate-700 font-medium py-2 hover:text-amber-500 transition-colors"
+              className="text-slate-700 font-medium py-2 hover:text-lime-500 transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
@@ -95,7 +95,7 @@ export default function Navbar() {
           ))}
           <Link
             href="#kontakt"
-            className="bg-amber-500 text-white text-center py-3 rounded-xl font-medium mt-2"
+            className="bg-lime-500 text-white text-center py-3 rounded-xl font-medium mt-2"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Angebot anfordern

@@ -10,7 +10,7 @@ const reviews = [
     date: "vor 2 Wochen",
     text: "Hervorragende Beratung und fehlerfreie Installation unserer neuen 10kWp Anlage mit Speicher. Das Team aus der Region war pünktlich, sauber und sehr kompetent. Absolute Empfehlung!",
     rating: 5,
-    image: "https://ui-avatars.com/api/?name=Thomas+M&background=f59e0b&color=fff",
+    image: "https://ui-avatars.com/api/?name=Thomas+M&background=84cc16&color=fff",
   },
   {
     name: "Familie Weber",
@@ -26,7 +26,7 @@ const reviews = [
     date: "vor 3 Monaten",
     text: "Ein regionaler Handwerksbetrieb, wie man ihn sich wünscht. Keine leeren Versprechungen, sondern ehrliche Beratung und Top-Umsetzung. Der Ertrag unserer Anlage übertrifft sogar die Prognosen.",
     rating: 5,
-    image: "https://ui-avatars.com/api/?name=Sabine+K&background=f59e0b&color=fff",
+    image: "https://ui-avatars.com/api/?name=Sabine+K&background=84cc16&color=fff",
   },
 ];
 
@@ -46,13 +46,13 @@ export default function Reviews() {
           >
             <div className="flex justify-center items-center gap-2 mb-4">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="text-amber-500 fill-amber-500" size={28} />
+                <Star key={i} className="text-lime-500 fill-lime-500" size={28} />
               ))}
             </div>
             <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">
               Das sagen unsere Kunden
             </h2>
-            <div className="w-24 h-1 bg-amber-500 mx-auto rounded-full mb-8" />
+            <div className="w-24 h-1 bg-lime-500 mx-auto rounded-full mb-8" />
             <p className="text-lg text-slate-600">
               Vertrauen Sie auf die Erfahrungen unserer zufriedenen Kunden aus der Region.
             </p>
@@ -69,7 +69,7 @@ export default function Reviews() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 relative border border-slate-100"
             >
-              <Quote className="absolute top-8 right-8 text-amber-500/20" size={48} />
+              <Quote className="absolute top-8 right-8 text-lime-500/20" size={48} />
               
               <div className="flex items-center gap-4 mb-6">
                 <img 
@@ -85,7 +85,7 @@ export default function Reviews() {
 
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(review.rating)].map((_, i) => (
-                  <Star key={i} className="text-amber-500 fill-amber-500" size={16} />
+                  <Star key={i} className="text-lime-500 fill-lime-500" size={16} />
                 ))}
                 <span className="text-xs text-slate-400 ml-2">{review.date}</span>
               </div>

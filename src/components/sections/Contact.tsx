@@ -26,13 +26,13 @@ export default function Contact() {
         <div className="max-w-6xl mx-auto bg-slate-900 rounded-[3rem] overflow-hidden shadow-2xl relative">
           
           {/* Decorative background for the card */}
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[100px] transform translate-x-1/2 -translate-y-1/2 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[100px] transform -translate-x-1/2 translate-y-1/2 pointer-events-none" />
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-lime-500/10 rounded-full blur-[100px] transform translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-lime-500/10 rounded-full blur-[100px] transform -translate-x-1/2 translate-y-1/2 pointer-events-none" />
 
           <div className="flex flex-col lg:flex-row relative z-10">
             
             {/* Contact Info Side */}
-            <div className="w-full lg:w-2/5 p-12 lg:p-16 bg-amber-500 text-slate-900">
+            <div className="w-full lg:w-2/5 p-12 lg:p-16 bg-lime-500 text-slate-900">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -102,7 +102,7 @@ export default function Contact() {
                         id="name"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all placeholder:text-slate-500"
+                        className="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-all placeholder:text-slate-500"
                         placeholder="Max Mustermann"
                         required
                       />
@@ -116,7 +116,7 @@ export default function Contact() {
                         id="phone"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all placeholder:text-slate-500"
+                        className="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-all placeholder:text-slate-500"
                         placeholder="Für Rückfragen"
                         required
                       />
@@ -132,7 +132,7 @@ export default function Contact() {
                       id="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all placeholder:text-slate-500"
+                      className="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-all placeholder:text-slate-500"
                       placeholder="max@beispiel.de"
                       required
                     />
@@ -147,7 +147,7 @@ export default function Contact() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       rows={4}
-                      className="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all placeholder:text-slate-500 resize-none"
+                      className="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-all placeholder:text-slate-500 resize-none"
                       placeholder="Bitte beschreiben Sie kurz Ihr Vorhaben (z.B. Einfamilienhaus, gewünschte Dachfläche, etc.)"
                       required
                     />
@@ -155,7 +155,7 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold py-4 rounded-xl transition-all transform hover:-translate-y-1 shadow-[0_0_30px_rgba(245,158,11,0.2)] flex items-center justify-center gap-2 text-lg"
+                    className="w-full bg-lime-500 hover:bg-lime-400 text-slate-900 font-bold py-4 rounded-xl transition-all transform hover:-translate-y-1 shadow-[0_0_30px_rgba(132,204,22,0.2)] flex items-center justify-center gap-2 text-lg"
                   >
                     Angebot anfordern
                     <Send size={20} />
