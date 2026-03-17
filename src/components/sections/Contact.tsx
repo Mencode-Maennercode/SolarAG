@@ -1,172 +1,74 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log(formData);
-    alert("Vielen Dank für Ihre Nachricht. Wir werden uns in Kürze bei Ihnen melden.");
-    setFormData({ name: "", email: "", phone: "", message: "" });
-  };
-
   return (
-    <section id="kontakt" className="py-32 bg-white relative overflow-hidden">
+    <section id="kontakt" className="py-32 bg-slate-50 relative overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto bg-slate-900 rounded-[3rem] overflow-hidden shadow-2xl relative">
-          
-          {/* Decorative background for the card */}
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-lime-500/10 rounded-full blur-[100px] transform translate-x-1/2 -translate-y-1/2 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-lime-500/10 rounded-full blur-[100px] transform -translate-x-1/2 translate-y-1/2 pointer-events-none" />
+        <div className="max-w-4xl mx-auto text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">
+              Kontaktieren Sie uns
+            </h2>
+            <div className="w-24 h-1 bg-lime-500 mx-auto rounded-full mb-8" />
+            <p className="text-lg text-slate-600 leading-relaxed">
+              Bereit für Ihre eigene Energiewende? Wir beraten Sie gerne persönlich und erstellen Ihnen ein individuelles Angebot.
+            </p>
+          </motion.div>
+        </div>
 
-          <div className="flex flex-col lg:flex-row relative z-10">
-            
-            {/* Contact Info Side */}
-            <div className="w-full lg:w-2/5 p-12 lg:p-16 bg-lime-500 text-slate-900">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <h3 className="text-3xl font-extrabold mb-4">Lassen Sie uns starten</h3>
-                <p className="text-slate-900/80 mb-12 text-lg">
-                  Bereit für Ihre eigene Energiewende? Kontaktieren Sie uns für ein unverbindliches und kostenloses Angebot.
-                </p>
-
-                <div className="space-y-8">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-slate-900/10 p-3 rounded-xl">
-                      <Phone className="text-slate-900" size={24} />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg">Rufen Sie uns an</h4>
-                      <p className="text-slate-900/80">01234 / 567890</p>
-                      <p className="text-slate-900/60 text-sm">Mo-Fr, 8:00 - 17:00 Uhr</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="bg-slate-900/10 p-3 rounded-xl">
-                      <Mail className="text-slate-900" size={24} />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg">Schreiben Sie uns</h4>
-                      <p className="text-slate-900/80">info@ag-solar.net</p>
-                      <p className="text-slate-900/60 text-sm">Wir antworten innerhalb von 24h</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="bg-slate-900/10 p-3 rounded-xl">
-                      <MapPin className="text-slate-900" size={24} />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg">Besuchen Sie uns</h4>
-                      <p className="text-slate-900/80">Musterstraße 123</p>
-                      <p className="text-slate-900/80">53501 Grafschaft</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 text-center"
+          >
+            <div className="bg-lime-500/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <Phone className="text-lime-500" size={32} />
             </div>
+            <h3 className="text-xl font-bold text-slate-900 mb-3">Rufen Sie uns an</h3>
+            <p className="text-slate-600 font-medium mb-2">01234 / 567890</p>
+            <p className="text-slate-500 text-sm">Mo-Fr, 8:00 - 17:00 Uhr</p>
+          </motion.div>
 
-            {/* Form Side */}
-            <div className="w-full lg:w-3/5 p-12 lg:p-16">
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <h3 className="text-3xl font-bold text-white mb-8">Senden Sie uns eine Nachricht</h3>
-                
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-slate-400 mb-2">
-                        Ihr Name
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-all placeholder:text-slate-500"
-                        placeholder="Max Mustermann"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-slate-400 mb-2">
-                        Telefonnummer
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-all placeholder:text-slate-500"
-                        placeholder="Für Rückfragen"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-slate-400 mb-2">
-                      E-Mail Adresse
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-all placeholder:text-slate-500"
-                      placeholder="max@beispiel.de"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-slate-400 mb-2">
-                      Ihre Nachricht
-                    </label>
-                    <textarea
-                      id="message"
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      rows={4}
-                      className="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-all placeholder:text-slate-500 resize-none"
-                      placeholder="Bitte beschreiben Sie kurz Ihr Vorhaben (z.B. Einfamilienhaus, gewünschte Dachfläche, etc.)"
-                      required
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-lime-500 hover:bg-lime-400 text-slate-900 font-bold py-4 rounded-xl transition-all transform hover:-translate-y-1 shadow-[0_0_30px_rgba(132,204,22,0.2)] flex items-center justify-center gap-2 text-lg"
-                  >
-                    Angebot anfordern
-                    <Send size={20} />
-                  </button>
-                  <p className="text-slate-500 text-sm text-center mt-4">
-                    Durch das Absenden stimmen Sie unserer Datenschutzerklärung zu.
-                  </p>
-                </form>
-              </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 text-center"
+          >
+            <div className="bg-lime-500/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <Mail className="text-lime-500" size={32} />
             </div>
-          </div>
+            <h3 className="text-xl font-bold text-slate-900 mb-3">Schreiben Sie uns</h3>
+            <p className="text-slate-600 font-medium mb-2">info@ag-solar.net</p>
+            <p className="text-slate-500 text-sm">Antwort innerhalb von 24h</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 text-center"
+          >
+            <div className="bg-lime-500/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <MapPin className="text-lime-500" size={32} />
+            </div>
+            <h3 className="text-xl font-bold text-slate-900 mb-3">Besuchen Sie uns</h3>
+            <p className="text-slate-600 font-medium mb-2">Musterstraße 123</p>
+            <p className="text-slate-600 font-medium">53501 Grafschaft</p>
+          </motion.div>
         </div>
       </div>
     </section>
