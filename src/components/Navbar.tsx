@@ -61,7 +61,7 @@ export default function Navbar() {
           ))}
           <Link
             href="#kontakt"
-            className="bg-lime-500 hover:bg-lime-400 text-white px-6 py-2.5 rounded-full font-medium transition-colors shadow-lg shadow-lime-500/30"
+            className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2.5 rounded-full font-medium transition-colors shadow-lg shadow-emerald-600/30"
           >
             Angebot anfordern
           </Link>
@@ -95,7 +95,7 @@ export default function Navbar() {
           ))}
           <Link
             href="#kontakt"
-            className="bg-lime-500 text-white text-center py-3 rounded-xl font-medium mt-2"
+            className="bg-emerald-600 text-white text-center py-3 rounded-xl font-medium mt-2"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Angebot anfordern

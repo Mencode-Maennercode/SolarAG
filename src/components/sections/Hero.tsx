@@ -48,7 +48,7 @@ export default function Hero() {
           >
             <a
               href="#kontakt"
-              className="bg-lime-500 hover:bg-lime-400 text-white px-8 py-4 rounded-full text-lg font-bold transition-all transform hover:scale-105 shadow-[0_0_40px_rgba(132,204,22,0.3)] flex items-center gap-2 w-full sm:w-auto justify-center"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-full text-lg font-bold transition-all transform hover:scale-105 shadow-[0_0_40px_rgba(16,185,129,0.3)] flex items-center gap-2 w-full sm:w-auto justify-center"
             >
               Kostenloses Angebot
               <ArrowRight size={20} />
