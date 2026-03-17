@@ -24,7 +24,7 @@ export default function Contact() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ export default function Contact() {
               <Phone className="text-lime-500" size={32} />
             </div>
             <h3 className="text-xl font-bold text-slate-900 mb-3">Rufen Sie uns an</h3>
-            <p className="text-slate-600 font-medium mb-2">01234 / 567890</p>
+            <p className="text-slate-600 font-medium mb-2">02641 / 90 29 358</p>
             <p className="text-slate-500 text-sm">Mo-Fr, 8:00 - 17:00 Uhr</p>
           </motion.div>
 
@@ -53,21 +53,6 @@ export default function Contact() {
             <h3 className="text-xl font-bold text-slate-900 mb-3">Schreiben Sie uns</h3>
             <p className="text-slate-600 font-medium mb-2">info@ag-solar.net</p>
             <p className="text-slate-500 text-sm">Antwort innerhalb von 24h</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 text-center"
-          >
-            <div className="bg-lime-500/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <MapPin className="text-lime-500" size={32} />
-            </div>
-            <h3 className="text-xl font-bold text-slate-900 mb-3">Besuchen Sie uns</h3>
-            <p className="text-slate-600 font-medium mb-2">Musterstraße 123</p>
-            <p className="text-slate-600 font-medium">53501 Grafschaft</p>
           </motion.div>
         </div>
       </div>

@@ -33,7 +33,7 @@ export default function About() {
                   </div>
                   <div>
                     <div className="text-sm text-slate-500 font-medium">Regional verankert</div>
-                    <div className="text-xl font-bold text-slate-900">Grafschaft & Umgebung</div>
+                    <div className="text-xl font-bold text-slate-900">Johannes Häblerstraße 21a<br />53501 Grafschaft</div>
                   </div>
                 </div>
               </div>

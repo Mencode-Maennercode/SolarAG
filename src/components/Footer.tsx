@@ -25,9 +25,9 @@ export default function Footer() {
         <div>
           <h4 className="text-lg font-bold text-white mb-4">Kontakt</h4>
           <ul className="space-y-2 text-slate-400">
-            <li>Musterstraße 123</li>
+            <li>Johannes Häblerstraße 21a</li>
             <li>53501 Grafschaft</li>
-            <li>Telefon: 01234 / 567890</li>
+            <li>Telefon: 02641 / 90 29 358</li>
             <li>Email: info@ag-solar.net</li>
           </ul>
         </div>
@@ -39,9 +39,6 @@ export default function Footer() {
             </li>
             <li>
               <a href="#" className="hover:text-lime-500 transition-colors">Datenschutz</a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-lime-500 transition-colors">AGB</a>
             </li>
           </ul>
         </div>
