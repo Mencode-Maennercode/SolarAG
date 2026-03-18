@@ -52,7 +52,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className={`font-medium transition-colors hover:text-lime-500 ${
+              className={`font-medium transition-colors hover:text-green-500 ${
                 isScrolled ? "text-slate-600" : "text-slate-200"
               }`}
             >
@@ -61,7 +61,7 @@ export default function Navbar() {
           ))}
           <Link
             href="#kontakt"
-            className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2.5 rounded-full font-medium transition-colors shadow-lg shadow-emerald-600/30"
+            className="bg-green-600 hover:bg-green-500 text-white px-6 py-2.5 rounded-full font-medium transition-colors shadow-lg shadow-green-600/30"
           >
             Angebot anfordern
           </Link>
@@ -87,7 +87,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-slate-700 font-medium py-2 hover:text-lime-500 transition-colors"
+              className="text-slate-700 font-medium py-2 hover:text-green-500 transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
@@ -95,7 +95,7 @@ export default function Navbar() {
           ))}
           <Link
             href="#kontakt"
-            className="bg-emerald-600 text-white text-center py-3 rounded-xl font-medium mt-2"
+            className="bg-green-600 text-white text-center py-3 rounded-xl font-medium mt-2"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Angebot anfordern

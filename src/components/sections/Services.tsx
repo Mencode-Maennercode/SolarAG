@@ -43,7 +43,7 @@ export default function Services() {
   return (
     <section id="leistungen" className="py-32 bg-slate-50 relative overflow-hidden">
       {/* Decorative background elements */}
-      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-lime-500/5 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-green-500/5 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-slate-200/50 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2 pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
@@ -54,13 +54,13 @@ export default function Services() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-lime-500 font-bold tracking-wider uppercase text-sm mb-4 block">
+            <span className="text-green-500 font-bold tracking-wider uppercase text-sm mb-4 block">
               Unsere Expertise
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">
               Ihre Komplettlösung aus einer Hand
             </h2>
-            <div className="w-24 h-1 bg-lime-500 mx-auto rounded-full mb-8" />
+            <div className="w-24 h-1 bg-green-500 mx-auto rounded-full mb-8" />
             <p className="text-lg text-slate-600 leading-relaxed">
               Von der ersten Beratung bis zur finalen Installation – wir bieten Ihnen perfekt aufeinander abgestimmte Systeme für Ihre private Energiewende.
             </p>
@@ -75,7 +75,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="group bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-lime-500/10 transition-all duration-500 transform hover:-translate-y-2 border border-slate-100 cursor-pointer flex flex-col"
+              className="group bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-500 transform hover:-translate-y-2 border border-slate-100 cursor-pointer flex flex-col"
               onClick={() => setActiveModal(service.id)}
             >
               <div className="relative h-64 overflow-hidden shrink-0">
@@ -86,12 +86,12 @@ export default function Services() {
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute top-6 left-6 z-20 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg">
-                  <service.icon size={32} className="text-lime-500" />
+                  <service.icon size={32} className="text-green-500" />
                 </div>
               </div>
 
               <div className="p-10 flex flex-col flex-grow">
-                <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-lime-500 transition-colors">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-green-500 transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-slate-600 leading-relaxed mb-8 flex-grow">
@@ -99,7 +99,7 @@ export default function Services() {
                 </p>
                 
                 <div
-                  className="inline-flex items-center gap-2 font-bold text-slate-900 group-hover:text-lime-500 transition-colors group/link mt-auto"
+                  className="inline-flex items-center gap-2 font-bold text-slate-900 group-hover:text-green-500 transition-colors group/link mt-auto"
                 >
                   Mehr erfahren
                   <ArrowRight size={20} className="transform group-hover/link:translate-x-1 transition-transform" />

@@ -17,7 +17,7 @@ export default function Contact() {
             <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">
               Kontaktieren Sie uns
             </h2>
-            <div className="w-24 h-1 bg-lime-500 mx-auto rounded-full mb-8" />
+            <div className="w-24 h-1 bg-green-500 mx-auto rounded-full mb-8" />
             <p className="text-lg text-slate-600 leading-relaxed">
               Bereit für Ihre eigene Energiewende? Wir beraten Sie gerne persönlich und erstellen Ihnen ein individuelles Angebot.
             </p>
@@ -32,8 +32,8 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 text-center"
           >
-            <div className="bg-lime-500/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <Phone className="text-lime-500" size={32} />
+            <div className="bg-green-500/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <Phone className="text-green-500" size={32} />
             </div>
             <h3 className="text-xl font-bold text-slate-900 mb-3">Rufen Sie uns an</h3>
             <p className="text-slate-600 font-medium mb-2">02641 / 90 29 358</p>
@@ -47,8 +47,8 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 text-center"
           >
-            <div className="bg-lime-500/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <Mail className="text-lime-500" size={32} />
+            <div className="bg-green-500/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <Mail className="text-green-500" size={32} />
             </div>
             <h3 className="text-xl font-bold text-slate-900 mb-3">Schreiben Sie uns</h3>
             <p className="text-slate-600 font-medium mb-2">info@ag-solar.net</p>
