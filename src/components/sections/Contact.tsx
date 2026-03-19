@@ -32,11 +32,18 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 text-center"
           >
-            <div className="bg-green-500/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <a
+              href="tel:+4926419029358"
+              className="bg-green-500/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 hover:bg-green-500/20 transition-colors"
+            >
               <Phone className="text-green-500" size={32} />
-            </div>
+            </a>
             <h3 className="text-xl font-bold text-slate-900 mb-3">Rufen Sie uns an</h3>
-            <p className="text-slate-600 font-medium mb-2">02641 / 90 29 358</p>
+            <p className="text-slate-600 font-medium mb-1 select-text">
+              <a href="tel:+4926419029358" className="hover:text-green-500 transition-colors">
+                02641 / 90 29 358
+              </a>
+            </p>
             <p className="text-slate-500 text-sm">Mo-Fr, 8:00 - 17:00 Uhr</p>
           </motion.div>
 
@@ -47,11 +54,21 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 text-center"
           >
-            <div className="bg-green-500/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <a
+              href="mailto:info@ag-solar.net"
+              className="bg-green-500/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 hover:bg-green-500/20 transition-colors"
+            >
               <Mail className="text-green-500" size={32} />
-            </div>
+            </a>
             <h3 className="text-xl font-bold text-slate-900 mb-3">Schreiben Sie uns</h3>
-            <p className="text-slate-600 font-medium mb-2">info@ag-solar.net</p>
+            <p className="text-slate-600 font-medium mb-1 select-text">
+              <a
+                href="mailto:info@ag-solar.net"
+                className="hover:text-green-500 transition-colors break-all"
+              >
+                info@ag-solar.net
+              </a>
+            </p>
             <p className="text-slate-500 text-sm">Antwort innerhalb von 24h</p>
           </motion.div>
         </div>

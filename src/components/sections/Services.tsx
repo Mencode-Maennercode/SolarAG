@@ -14,7 +14,7 @@ const services = [
     icon: Sun,
     title: "Photovoltaik",
     description: "Machen Sie sich unabhängig von steigenden Strompreisen. Wir planen und installieren Ihre maßgeschneiderte Solaranlage für maximale Erträge.",
-    image: "/solar.jpg",
+    image: "/fullblack2.jpg",
     Content: PhotovoltaikContent,
   },
   {
@@ -22,7 +22,7 @@ const services = [
     icon: Battery,
     title: "Batteriespeicher",
     description: "Nutzen Sie Ihren selbst produzierten Solarstrom rund um die Uhr. Mit modernsten Speichersystemen erhöhen Sie Ihren Eigenverbrauch drastisch.",
-    image: "https://images.unsplash.com/photo-1592318348310-f31b61a931c8?auto=format&fit=crop&w=800&q=80",
+    image: "/byd.png",
     Content: BatteryContent,
   },
   {
@@ -30,7 +30,7 @@ const services = [
     icon: Cable,
     title: "Wallboxen",
     description: "Tanken Sie die Sonne. Wir installieren intelligente Ladestationen für Ihr Elektroauto – sicher, schnell und perfekt auf Ihre PV-Anlage abgestimmt.",
-    image: "https://images.unsplash.com/photo-1766507679641-51002768af6b?auto=format&fit=crop&w=800&q=80",
+    image: "/kostalwa.png",
     Content: WallboxContent,
   },
 ];
@@ -39,6 +39,16 @@ export default function Services() {
   const [activeModal, setActiveModal] = useState<string | null>(null);
 
   const activeService = services.find((s) => s.id === activeModal);
+
+  const handleContactClick = () => {
+    setActiveModal(null);
+    if (typeof window !== "undefined") {
+      const target = document.querySelector("#kontakt");
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <section id="leistungen" className="py-32 bg-slate-50 relative overflow-hidden">
@@ -115,7 +125,9 @@ export default function Services() {
         onClose={() => setActiveModal(null)}
         title={activeService?.title || ""}
       >
-        {activeService && <activeService.Content />}
+        {activeService && (
+          <activeService.Content onContactClick={handleContactClick} />
+        )}
       </ServiceModal>
     </section>
   );

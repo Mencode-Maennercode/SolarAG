@@ -2,7 +2,11 @@
 
 import { Car, Zap, PiggyBank, ArrowRight } from "lucide-react";
 
-export default function WallboxContent() {
+interface WallboxContentProps {
+  onContactClick?: () => void;
+}
+
+export default function WallboxContent({ onContactClick }: WallboxContentProps) {
   return (
     <div className="space-y-8">
       <div>
@@ -55,11 +59,15 @@ export default function WallboxContent() {
         </div>
       </div>
 
-      <div className="flex justify-end pt-4 border-t border-slate-100">
-        <a href="#kontakt" className="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-xl font-medium transition-colors flex items-center gap-2">
+      <div className="flex justify-end pt-4 border-t border-slate-100 bg-slate-50/60 -mx-6 px-6 pb-2 pt-4">
+        <button
+          type="button"
+          onClick={onContactClick}
+          className="bg-slate-900 hover:bg-emerald-600 text-white px-6 py-3 rounded-full font-medium transition-colors flex items-center gap-2 shadow-lg shadow-slate-900/15"
+        >
           Jetzt Wallbox anfragen
           <ArrowRight size={18} />
-        </a>
+        </button>
       </div>
     </div>
   );

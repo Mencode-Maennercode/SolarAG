@@ -2,13 +2,29 @@
 
 import { BatteryCharging, ShieldCheck, ArrowRight } from "lucide-react";
 
-export default function BatteryContent() {
+interface BatteryContentProps {
+  onContactClick?: () => void;
+}
+
+export default function BatteryContent({ onContactClick }: BatteryContentProps) {
   return (
     <div className="space-y-8">
       <div>
         <p className="text-slate-600 leading-relaxed mb-6">
           Ein Stromspeicher maximiert Ihre Unabhängigkeit vom öffentlichen Stromnetz. Anstatt überschüssigen Solarstrom tagsüber für wenig Geld einzuspeisen, speichern Sie ihn für die Nutzung in den Abend- und Nachtstunden.
         </p>
+        <p className="text-slate-600 leading-relaxed text-sm mb-4">
+          Wir setzen auf <strong>BYD</strong> – den Weltmarktführer für Batteriespeichersysteme.
+        </p>
+        <div className="bg-lime-50 border-l-4 border-lime-500 p-4 rounded-r-xl">
+          <h5 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+            <span className="text-lime-600">✓</span>
+            Modulare Erweiterbarkeit
+          </h5>
+          <p className="text-slate-600 text-sm leading-relaxed">
+            Die Systeme sind modular aufgebaut und können jederzeit durch weitere Module einfach erweitert werden, wenn Ihr Bedarf steigt – ohne kompletten Austausch der Anlage.
+          </p>
+        </div>
       </div>
 
       <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
@@ -57,11 +73,15 @@ export default function BatteryContent() {
         </ul>
       </div>
 
-      <div className="flex justify-end pt-4 border-t border-slate-100">
-        <a href="#kontakt" className="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-xl font-medium transition-colors flex items-center gap-2">
+      <div className="flex justify-end pt-4 border-t border-slate-100 bg-slate-50/60 -mx-6 px-6 pb-2 pt-4">
+        <button
+          type="button"
+          onClick={onContactClick}
+          className="bg-slate-900 hover:bg-emerald-600 text-white px-6 py-3 rounded-full font-medium transition-colors flex items-center gap-2 shadow-lg shadow-slate-900/15"
+        >
           Beratungstermin vereinbaren
           <ArrowRight size={18} />
-        </a>
+        </button>
       </div>
     </div>
   );

@@ -41,20 +41,22 @@ export default function ServiceModal({ isOpen, onClose, title, children }: Servi
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col pointer-events-auto"
+              className="bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[85vh] overflow-hidden flex flex-col pointer-events-auto border border-slate-200"
             >
-              <div className="flex justify-between items-center p-6 border-b border-slate-100">
-                <h3 className="text-2xl font-bold text-slate-900">{title}</h3>
+              <div className="flex justify-between items-center px-6 py-4 border-b border-slate-100">
+                <h3 className="text-lg md:text-xl font-semibold text-slate-900">{title}</h3>
                 <button
                   onClick={onClose}
-                  className="p-2 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-full transition-colors"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-500 hover:bg-emerald-500 hover:border-emerald-500 hover:text-white transition-colors"
+                  aria-label="Fenster schließen"
                 >
-                  <X size={24} />
+                  <X className="h-4 w-4" />
                 </button>
               </div>
-              <div className="p-6 overflow-y-auto custom-scrollbar">
+              <div className="px-6 py-4 overflow-y-auto custom-scrollbar flex-1 min-h-0">
                 {children}
               </div>
+              {/* Untere Schließen-Leiste wird in den jeweiligen Content-Komponenten umgesetzt */}
             </motion.div>
           </div>
         </>

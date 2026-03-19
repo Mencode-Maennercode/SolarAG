@@ -32,8 +32,7 @@ export default function About() {
                     <MapPin size={32} />
                   </div>
                   <div>
-                    <div className="text-sm text-slate-500 font-medium">Regional verankert</div>
-                    <div className="text-xl font-bold text-slate-900">Johannes Häblerstraße 21a<br />53501 Grafschaft</div>
+                    <div className="text-xl font-bold text-slate-900">Regional verankert</div>
                   </div>
                 </div>
               </div>
