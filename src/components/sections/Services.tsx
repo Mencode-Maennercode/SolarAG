@@ -22,7 +22,7 @@ const services = [
     icon: Battery,
     title: "Batteriespeicher",
     description: "Nutzen Sie Ihren selbst produzierten Solarstrom rund um die Uhr. Mit modernsten Speichersystemen erhöhen Sie Ihren Eigenverbrauch drastisch.",
-    image: "/byd.png",
+    image: "/Byd.png",
     Content: BatteryContent,
   },
   {

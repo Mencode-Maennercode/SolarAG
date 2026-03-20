@@ -19,6 +19,9 @@ export default function SolarCalculator({ onContactClick }: PhotovoltaikContentP
               alt="KOSTAL"
               fill
               className="object-contain"
+              priority={false}
+              loading="lazy"
+              sizes="(max-width: 768px) 288px, 320px"
             />
           </div>
         </div>
