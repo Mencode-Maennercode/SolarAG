@@ -30,7 +30,7 @@ const services: { id: string; icon: React.ElementType; title: string; descriptio
     icon: Cable,
     title: "Wallboxen",
     description: "Tanken Sie die Sonne. Wir installieren intelligente Ladestationen für Ihr Elektroauto – sicher, schnell und perfekt auf Ihre PV-Anlage abgestimmt.",
-    image: "/wallbox-kostal-ag1.jfif",
+    image: "/neu-wallbox.png",
     imageStyle: { objectPosition: "65% 63%" },
     imageClass: "scale-[1.2] group-hover:scale-[1.35]",
     Content: WallboxContent,
