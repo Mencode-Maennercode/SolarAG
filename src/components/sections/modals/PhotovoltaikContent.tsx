@@ -10,10 +10,10 @@ interface PhotovoltaikContentProps {
 export default function SolarCalculator({ onContactClick }: PhotovoltaikContentProps) {
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-4">
       <div className="relative">
-        <div className="float-right ml-6 mb-6 w-72 md:w-80 rounded-2xl overflow-hidden">
-          <div className="relative w-full h-60 md:h-72">
+        <div className="float-right ml-6 mb-3 w-60 md:w-64 rounded-2xl overflow-hidden">
+          <div className="relative w-full h-48 md:h-56">
             <Image
               src="/kostalwe.png"
               alt="KOSTAL"
@@ -21,15 +21,15 @@ export default function SolarCalculator({ onContactClick }: PhotovoltaikContentP
               className="object-contain"
               priority={false}
               loading="lazy"
-              sizes="(max-width: 768px) 288px, 320px"
+              sizes="(max-width: 768px) 240px, 256px"
             />
           </div>
         </div>
 
-        <p className="text-slate-600 leading-relaxed mb-4">
+        <p className="text-slate-600 leading-relaxed mb-2">
           Maximale Wirtschaftlichkeit entsteht nicht durch maximale Modulfläche, sondern durch präzise Planung. Wir dimensionieren Ihre Photovoltaikanlage exakt nach Ihrem individuellen Strombedarf – unter Berücksichtigung von Haushaltsgröße, Wärmepumpe, Elektromobilität und der optimalen Dachausrichtung.
         </p>
-        <p className="text-slate-600 leading-relaxed mb-4">
+        <p className="text-slate-600 leading-relaxed mb-2">
           Das Ergebnis: Sie vermeiden kostspielige Überdimensionierung und erzielen einen deutlich höheren Eigenverbrauchsanteil. Statt Überschüsse zu Niedrigpreisen ins Netz einzuspeisen, nutzen Sie Ihren selbst erzeugten Strom dort, wo er den größten Wert hat – in Ihrem eigenen Haushalt.
         </p>
         <p className="text-slate-600 leading-relaxed text-sm">
@@ -38,8 +38,8 @@ export default function SolarCalculator({ onContactClick }: PhotovoltaikContentP
       </div>
 
       <div>
-        <h4 className="font-bold text-slate-900 mb-4">Aktuelle Förderungen & Vorteile:</h4>
-        <ul className="space-y-3">
+        <h4 className="font-bold text-slate-900 mb-2">Aktuelle Förderungen & Vorteile:</h4>
+        <ul className="space-y-1">
           <li className="flex items-start gap-3">
             <div className="bg-green-100 text-green-600 p-1 rounded-full mt-0.5">✓</div>
             <p className="text-slate-600"><strong>0% MwSt:</strong> Keine Mehrwertsteuer beim Kauf von PV-Anlagen (JStG 2022).</p>
@@ -55,7 +55,7 @@ export default function SolarCalculator({ onContactClick }: PhotovoltaikContentP
         </ul>
       </div>
       
-      <div className="flex justify-end pt-4 border-t border-slate-100 bg-slate-50/60 -mx-6 px-6 pb-2 pt-4">
+      <div className="flex justify-end pt-1 border-t border-slate-100 -mx-6 px-6 pb-0">
         <button
           type="button"
           onClick={onContactClick}

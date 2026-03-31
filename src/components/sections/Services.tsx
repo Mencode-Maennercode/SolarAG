@@ -8,7 +8,7 @@ import PhotovoltaikContent from "./modals/PhotovoltaikContent";
 import BatteryContent from "./modals/BatteryContent";
 import WallboxContent from "./modals/WallboxContent";
 
-const services = [
+const services: { id: string; icon: React.ElementType; title: string; description: string; image: string; imageStyle?: React.CSSProperties; imageClass?: string; Content: React.ComponentType<{ onContactClick?: () => void }> }[] = [
   {
     id: "photovoltaik",
     icon: Sun,
@@ -30,7 +30,9 @@ const services = [
     icon: Cable,
     title: "Wallboxen",
     description: "Tanken Sie die Sonne. Wir installieren intelligente Ladestationen für Ihr Elektroauto – sicher, schnell und perfekt auf Ihre PV-Anlage abgestimmt.",
-    image: "/kostalwa.png",
+    image: "/wallbox-kostal-ag1.jfif",
+    imageStyle: { objectPosition: "65% 63%" },
+    imageClass: "scale-[1.2] group-hover:scale-[1.35]",
     Content: WallboxContent,
   },
 ];
@@ -93,7 +95,8 @@ export default function Services() {
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  className={`w-full h-full object-cover transform ${service.imageClass ?? "group-hover:scale-110"} transition-transform duration-700`}
+                  style={service.imageStyle}
                 />
                 <div className="absolute top-6 left-6 z-20 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg">
                   <service.icon size={32} className="text-green-500" />
