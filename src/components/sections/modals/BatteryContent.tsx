@@ -32,9 +32,9 @@ export default function BatteryContent({ onContactClick }: BatteryContentProps) 
             </p>
           </div>
           <div className="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
-            <div className="text-lime-500 font-bold text-lg mb-2">Notstromfunktion</div>
+            <div className="text-lime-500 font-bold text-lg mb-2">Modulare Erweiterbarkeit</div>
             <p className="text-slate-600 text-sm">
-              Bleiben Sie auch bei Netzausfällen versorgt – optional für komplette Hausversorgung.
+              Passen Sie Ihren Speicher jederzeit an Ihre wachsenden Anforderungen an.
             </p>
           </div>
         </div>

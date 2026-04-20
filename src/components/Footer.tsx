@@ -33,7 +33,7 @@ export default function Footer() {
         <div>
           <h4 className="text-lg font-bold text-white mb-4">Kontakt</h4>
           <ul className="space-y-2 text-slate-400">
-            <li>Johannes Häblerstraße 21a</li>
+            <li>Johannes Häbler Straße 21a</li>
             <li>53501 Grafschaft</li>
             <li>
               Telefon:{" "}
@@ -92,7 +92,7 @@ export default function Footer() {
         <section>
           <h3 className="font-semibold text-slate-900 mb-1">Angaben gemäß § 5 TMG</h3>
           <p>AG Solar GmbH</p>
-          <p>Johannes Häblerstraße 21a</p>
+          <p>Johannes Häbler Straße 21a</p>
           <p>53501 Grafschaft</p>
         </section>
 
@@ -132,7 +132,7 @@ export default function Footer() {
       >
         <section>
           <h3 className="font-semibold text-slate-900 mb-1">1. Verantwortlicher</h3>
-          <p>AG Solar GmbH, Johannes Häblerstraße 21a, 53501 Grafschaft</p>
+          <p>AG Solar GmbH, Johannes Häbler Straße 21a, 53501 Grafschaft</p>
           <p>Telefon: +49 (0) 2641 90 29 358, E-Mail: info@ag-solar.net</p>
         </section>
 

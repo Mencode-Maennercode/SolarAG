@@ -16,14 +16,14 @@ export default function WallboxContent({ onContactClick }: WallboxContentProps) 
       <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100">
         <h4 className="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
           <Car className="text-lime-500" />
-          Kostenvergleich: Verbrenner vs. E-Auto mit PV
+          Kostenvergleich: E-Auto mit PV vs. E-Auto ohne PV
         </h4>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden">
             <div className="absolute top-0 right-0 w-16 h-16 bg-red-500/10 rounded-full blur-xl transform translate-x-1/2 -translate-y-1/2"></div>
-            <div className="text-slate-500 text-sm mb-1">Benzin/Diesel (7L/100km bei 1,80€)</div>
-            <div className="text-2xl font-bold text-slate-900 mb-2">ca. 12,60 €</div>
+            <div className="text-slate-500 text-sm mb-1">E-Auto ohne PV (20kWh/100km bei 34ct/kWh)</div>
+            <div className="text-2xl font-bold text-slate-900 mb-2">ca. 6,80 €</div>
             <div className="text-xs text-slate-400">pro 100 Kilometer</div>
           </div>
           <div className="bg-white p-4 rounded-xl border border-lime-200 shadow-sm relative overflow-hidden">
@@ -49,10 +49,10 @@ export default function WallboxContent({ onContactClick }: WallboxContentProps) 
         <div>
           <h4 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
             <PiggyBank className="text-lime-500" size={20} />
-            KfW Förderung 442
+            Wirtschaftlichkeit
           </h4>
           <p className="text-slate-600 leading-relaxed text-sm">
-            Aktuell (je nach Verfügbarkeit der Mittel) fördert die KfW die Kombination aus PV-Anlage, Speicher und Wallbox für Privathaushalte mit bis zu 10.200€. Wir unterstützen Sie bei der Auslegung einer förderfähigen Anlage und stellen alle nötigen Dokumente für den Antrag bereit.
+            Die Investition in eine Wallbox amortisiert sich durch die Nutzung von günstigem Solarstrom. Besonders in Kombination mit einem Batteriespeicher können Sie die Ladekosten minimieren und von steigenden Strompreisen unabhängig machen.
           </p>
         </div>
       </div>

@@ -28,18 +28,18 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/90 backdrop-blur-md shadow-md py-4"
-          : "bg-transparent py-6"
+          ? "bg-white/90 backdrop-blur-md shadow-md h-16"
+          : "bg-transparent h-20"
       }`}
     >
-      <div className="container mx-auto px-6 flex justify-between items-center">
-        <Link href="#" className="flex items-center gap-2 group">
-          <div className="relative w-48 h-16 overflow-hidden rounded-2xl group-hover:scale-105 transition-transform">
+      <div className="h-full container mx-auto px-6 flex justify-between items-center">
+        <Link href="#" className="self-stretch flex items-center">
+          <div className="relative w-56 h-full overflow-hidden">
             <Image
               src="/logo_transparent.png"
               alt="AG Solar GmbH Logo"
               fill
-              className="object-contain"
+              className="object-contain scale-[1.2]"
               priority
             />
           </div>

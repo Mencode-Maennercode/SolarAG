@@ -69,8 +69,7 @@ export default function Contact() {
                 info@ag-solar.net
               </a>
             </p>
-            <p className="text-slate-500 text-sm">Antwort innerhalb von 24h</p>
-          </motion.div>
+                      </motion.div>
         </div>
       </div>
     </section>

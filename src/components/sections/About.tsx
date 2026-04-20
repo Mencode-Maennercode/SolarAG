@@ -51,16 +51,16 @@ export default function About() {
               Aus der Region, für die Region
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-8 leading-tight">
-              Wir bringen die Sonne ins Ahrtal und ans Rheinland
+              Nutzen Sie die Sonne in der Region
             </h2>
             
             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-              Als lokaler Fachbetrieb aus der Grafschaft kennen wir die spezifischen Anforderungen unserer Region. Wir sind Ihr verlässlicher Ansprechpartner vor Ort – von der ersten Beratung bis zur regelmäßigen Wartung Ihrer Anlage.
+              Wir sind Ihr verlässlicher Ansprechpartner vor Ort – von der ersten Beratung bis zur regelmäßigen Wartung Ihrer Anlage.
             </p>
 
             <div className="space-y-6 mb-10">
               {[
-                "Persönliche Beratung vor Ort in Grafschaft, Ahr & Rhein",
+                "Persönliche Beratung vor Ort",
                 "Individuelle Planung für maximale Erträge",
                 "Fachgerechte Installation durch eigenes Personal",
                 "Schneller Service dank regionaler Nähe"

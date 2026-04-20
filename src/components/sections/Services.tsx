@@ -29,7 +29,7 @@ const services: { id: string; icon: React.ElementType; title: string; descriptio
     id: "wallbox",
     icon: Cable,
     title: "Wallboxen",
-    description: "Tanken Sie die Sonne. Wir installieren intelligente Ladestationen für Ihr Elektroauto – sicher, schnell und perfekt auf Ihre PV-Anlage abgestimmt.",
+    description: "Tanken Sie die Sonne. Wir installieren intelligente Ladestationen für Ihr Elektroauto - sicher, schnell und perfekt, egal ob mit oder ohne PV Anlage.",
     image: "/neu-wallbox.png",
     imageStyle: { objectPosition: "65% 63%" },
     imageClass: "scale-[1.2] group-hover:scale-[1.35]",

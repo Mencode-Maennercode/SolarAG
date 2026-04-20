@@ -1,15 +1,24 @@
 "use client";
 
+import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Zap, Shield, Leaf } from "lucide-react";
 
 export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.5;
+    }
+  }, []);
+
   return (
     <section className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-slate-900/60 z-10"></div>
         <video
+          ref={videoRef}
           autoPlay
           loop
           muted
@@ -36,7 +45,7 @@ export default function Hero() {
             </h1>
             <p className="text-xl md:text-2xl text-slate-200 mb-10 leading-relaxed max-w-2xl mx-auto">
               Maßgeschneiderte Solaranlagen, Batteriespeicher und Wallboxen für 
-              Privathaushalte und Unternehmen in der Region Grafschaft, Ahr und Rhein.
+              Privathaushalte und Unternehmen.
             </p>
           </motion.div>
 
