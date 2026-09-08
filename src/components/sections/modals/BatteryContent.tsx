@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { BatteryCharging, ShieldCheck, ArrowRight } from "lucide-react";
 
 interface BatteryContentProps {
@@ -61,7 +62,10 @@ export default function BatteryContent({ onContactClick }: BatteryContentProps) 
         </ul>
       </div>
 
-      <div className="flex justify-end pt-1 border-t border-slate-100 -mx-6 px-6 pb-0">
+      <div className="flex flex-wrap justify-between items-center gap-3 pt-1 border-t border-slate-100 -mx-6 px-6 pb-0">
+        <Link href="/leistungen/batteriespeicher/" className="text-slate-500 hover:text-green-600 underline underline-offset-4 text-sm font-medium">
+          Ausführliche Leistungsseite
+        </Link>
         <button
           type="button"
           onClick={onContactClick}

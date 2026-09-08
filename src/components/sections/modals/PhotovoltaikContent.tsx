@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Zap, ArrowRight, Euro } from "lucide-react";
 
 interface PhotovoltaikContentProps {
@@ -55,7 +56,10 @@ export default function SolarCalculator({ onContactClick }: PhotovoltaikContentP
         </ul>
       </div>
       
-      <div className="flex justify-end pt-1 border-t border-slate-100 -mx-6 px-6 pb-0">
+      <div className="flex flex-wrap justify-between items-center gap-3 pt-1 border-t border-slate-100 -mx-6 px-6 pb-0">
+        <Link href="/leistungen/photovoltaik/" className="text-slate-500 hover:text-green-600 underline underline-offset-4 text-sm font-medium">
+          Ausführliche Leistungsseite
+        </Link>
         <button
           type="button"
           onClick={onContactClick}

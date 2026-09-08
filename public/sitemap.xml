@@ -6,18 +6,18 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.ag-solar.net/#leistungen</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.ag-solar.net/#ueber-uns</loc>
+    <loc>https://www.ag-solar.net/leistungen/photovoltaik/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ag-solar.net/#kontakt</loc>
+    <loc>https://www.ag-solar.net/leistungen/batteriespeicher/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ag-solar.net/leistungen/wallbox/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
