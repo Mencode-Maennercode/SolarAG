@@ -5,32 +5,32 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section id="kontakt" className="py-32 bg-slate-50 relative overflow-hidden">
-      <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center mb-16">
+    <section id="kontakt" className="py-16 sm:py-24 lg:py-32 bg-slate-50 relative overflow-hidden">
+      <div className="container mx-auto px-5 sm:px-6">
+        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">
               Kontaktieren Sie uns
             </h2>
-            <div className="w-24 h-1 bg-green-500 mx-auto rounded-full mb-8" />
-            <p className="text-lg text-slate-600 leading-relaxed">
+            <div className="w-24 h-1 bg-green-500 mx-auto rounded-full mb-6 sm:mb-8" />
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
               Bereit für Ihre eigene Energiewende? Wir beraten Sie gerne persönlich und erstellen Ihnen ein individuelles Angebot.
             </p>
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 text-center"
+            className="bg-white p-6 sm:p-8 rounded-3xl shadow-xl shadow-slate-200/50 text-center"
           >
             <a
               href="tel:+4926419029358"
@@ -52,7 +52,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 text-center"
+            className="bg-white p-6 sm:p-8 rounded-3xl shadow-xl shadow-slate-200/50 text-center"
           >
             <a
               href="mailto:info@ag-solar.net"

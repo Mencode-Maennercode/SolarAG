@@ -2,11 +2,13 @@ import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
 import About from "@/components/sections/About";
 import Contact from "@/components/sections/Contact";
+import ScrollDivider from "@/components/ScrollDivider";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen w-full">
       <Hero />
+      <ScrollDivider />
       <Services />
       <About />
       <Contact />

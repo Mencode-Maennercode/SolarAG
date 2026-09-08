@@ -1,0 +1,10 @@
+Options -Indexes
+
+RewriteEngine On
+
+# Redirect specific old pages to homepage (no redirect for / itself)
+RewriteRule ^kontakt/?$ https://www.ag-solar.net/ [R=301,L]
+RewriteRule ^leistungen/?$ https://www.ag-solar.net/ [R=301,L]
+RewriteRule ^ueber-uns/?$ https://www.ag-solar.net/ [R=301,L]
+RewriteRule ^datenschutzerklaerung/?$ https://www.ag-solar.net/ [R=301,L]
+RewriteRule ^impressum/?$ https://www.ag-solar.net/ [R=301,L]

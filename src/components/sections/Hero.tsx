@@ -1,29 +1,21 @@
 "use client";
 
-import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Zap, Shield, Leaf } from "lucide-react";
 
 export default function Hero() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 0.5;
-    }
-  }, []);
-
   return (
-    <section className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[100dvh] md:min-h-[800px] flex items-center justify-center overflow-hidden pt-24 md:pt-0">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
-          ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
-          className="w-full h-full object-cover"
+          preload="auto"
+          disablePictureInPicture
+          className="w-full h-full object-cover [transform:translateZ(0)] [will-change:transform] [backface-visibility:hidden]"
         >
           <source
             src="/hero.mp4"
@@ -33,18 +25,21 @@ export default function Hero() {
         </video>
       </div>
 
-      <div className="container relative z-20 mx-auto px-6 pt-32">
+      {/* Subtle dark overlay for legibility on mobile */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-slate-900/15 via-transparent to-slate-900/15" />
+
+      <div className="container relative z-20 mx-auto px-5 sm:px-6 pt-32 pb-10 md:pt-40 md:pb-24 lg:pt-44">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-white mb-4 sm:mb-6 tracking-tight leading-[1.1]">
               Ihre <span className="text-green-500">Energie</span> der Zukunft
             </h1>
-            <p className="text-xl md:text-2xl text-slate-200 mb-10 leading-relaxed max-w-2xl mx-auto">
-              Maßgeschneiderte Solaranlagen, Batteriespeicher und Wallboxen für 
+            <p className="text-base sm:text-xl md:text-2xl text-slate-200 mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto px-2">
+              Maßgeschneiderte Solaranlagen, Batteriespeicher und Wallboxen für
               Privathaushalte und Unternehmen.
             </p>
           </motion.div>
@@ -57,14 +52,14 @@ export default function Hero() {
           >
             <a
               href="#kontakt"
-              className="bg-green-600 hover:bg-green-500 text-white px-8 py-4 rounded-full text-lg font-bold transition-all transform hover:scale-105 shadow-[0_0_40px_rgba(150,194,38,0.3)] flex items-center gap-2 w-full sm:w-auto justify-center"
+              className="bg-green-600 hover:bg-green-500 text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-base sm:text-lg font-bold transition-all transform hover:scale-105 shadow-[0_0_40px_rgba(150,194,38,0.3)] flex items-center gap-2 w-full sm:w-auto justify-center"
             >
               Kostenloses Angebot
               <ArrowRight size={20} />
             </a>
             <a
               href="#leistungen"
-              className="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-full text-lg font-bold transition-all w-full sm:w-auto text-center"
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-base sm:text-lg font-bold transition-all w-full sm:w-auto text-center"
             >
               Unsere Leistungen
             </a>
@@ -75,40 +70,29 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto"
+            className="mt-10 sm:mt-16 md:mt-20 grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 max-w-3xl mx-auto"
           >
             {[
               { icon: Zap, text: "Höchste Effizienz" },
               { icon: Shield, text: "Garantierte Qualität" },
               { icon: Leaf, text: "100% Nachhaltig" },
             ].map((item, index) => (
-              <div key={index} className="flex items-center gap-3 text-white/90 justify-center bg-white/5 backdrop-blur-sm p-4 rounded-2xl border border-white/10">
-                <div className="bg-green-500/20 p-2 rounded-lg text-green-500">
-                  <item.icon size={24} />
+              <div
+                key={index}
+                className="flex flex-col md:flex-row items-center gap-2 md:gap-3 text-white/90 justify-center bg-white/5 backdrop-blur-sm p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-white/10"
+              >
+                <div className="bg-green-500/20 p-1.5 sm:p-2 rounded-lg text-green-500">
+                  <item.icon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
-                <span className="font-semibold">{item.text}</span>
+                <span className="font-semibold text-[11px] sm:text-sm md:text-base text-center md:text-left leading-tight">
+                  {item.text}
+                </span>
               </div>
             ))}
           </motion.div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center"
-      >
-        <span className="text-white/60 text-sm mb-2 font-medium tracking-wider uppercase">Mehr erfahren</span>
-        <div className="w-1 h-12 bg-white/20 rounded-full overflow-hidden">
-          <motion.div
-            animate={{ y: [0, 48, 0] }}
-            transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
-            className="w-full h-1/2 bg-lime-500 rounded-full"
-          />
-        </div>
-      </motion.div>
     </section>
   );
 }

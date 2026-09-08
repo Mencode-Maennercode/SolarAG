@@ -1,0 +1,23 @@
+{
+  "name": "AG Solar GmbH",
+  "short_name": "AG Solar",
+  "description": "AG Solar GmbH - Photovoltaik, Batteriespeicher & Wallboxen in der Grafschaft, Ahr & Rhein",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/logo_transparent.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo_transparent.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

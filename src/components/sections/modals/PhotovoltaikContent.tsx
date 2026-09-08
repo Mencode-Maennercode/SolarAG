@@ -15,7 +15,7 @@ export default function SolarCalculator({ onContactClick }: PhotovoltaikContentP
         <div className="float-right ml-6 mb-3 w-60 md:w-64 rounded-2xl overflow-hidden">
           <div className="relative w-full h-48 md:h-56">
             <Image
-              src="/kostalwe.png"
+              src="/kostalwe.webp"
               alt="KOSTAL"
               fill
               className="object-contain"

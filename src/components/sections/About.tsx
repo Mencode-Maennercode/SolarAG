@@ -5,9 +5,9 @@ import { CheckCircle2, MapPin } from "lucide-react";
 
 export default function About() {
   return (
-    <section id="ueber-uns" className="py-32 bg-white relative overflow-hidden">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row gap-16 items-center">
+    <section id="ueber-uns" className="py-16 sm:py-24 lg:py-32 bg-white relative overflow-hidden">
+      <div className="container mx-auto px-5 sm:px-6">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
           
           {/* Image Side */}
           <motion.div 
@@ -22,7 +22,7 @@ export default function About() {
               <img 
                 src="https://images.unsplash.com/photo-1545320957-ca226073958e?auto=format&fit=crop&w=1200&q=80" 
                 alt="Solar Installation in der Grafschaft" 
-                className="relative z-10 rounded-3xl shadow-2xl object-cover h-[600px] w-full"
+                className="relative z-10 rounded-3xl shadow-2xl object-cover h-[320px] sm:h-[440px] lg:h-[600px] w-full"
               />
               
               {/* Floating Badge */}
@@ -50,15 +50,15 @@ export default function About() {
             <span className="text-green-500 font-bold tracking-wider uppercase text-sm mb-4 block">
               Aus der Region, für die Region
             </span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-8 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 sm:mb-8 leading-tight">
               Nutzen Sie die Sonne in der Region
             </h2>
-            
-            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+
+            <p className="text-base sm:text-lg text-slate-600 mb-6 sm:mb-8 leading-relaxed">
               Wir sind Ihr verlässlicher Ansprechpartner vor Ort – von der ersten Beratung bis zur regelmäßigen Wartung Ihrer Anlage.
             </p>
 
-            <div className="space-y-6 mb-10">
+            <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-10">
               {[
                 "Persönliche Beratung vor Ort",
                 "Individuelle Planung für maximale Erträge",
@@ -69,7 +69,7 @@ export default function About() {
                   <div className="mt-1">
                     <CheckCircle2 className="text-green-500" size={24} />
                   </div>
-                  <p className="text-slate-700 font-medium text-lg">{item}</p>
+                  <p className="text-slate-700 font-medium text-base sm:text-lg">{item}</p>
                 </div>
               ))}
             </div>

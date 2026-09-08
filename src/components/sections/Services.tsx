@@ -14,7 +14,7 @@ const services: { id: string; icon: React.ElementType; title: string; descriptio
     icon: Sun,
     title: "Photovoltaik",
     description: "Machen Sie sich unabhängig von steigenden Strompreisen. Wir planen und installieren Ihre maßgeschneiderte Solaranlage für maximale Erträge.",
-    image: "/fullblack2.jpg",
+    image: "/fullblack2.webp",
     Content: PhotovoltaikContent,
   },
   {
@@ -22,7 +22,7 @@ const services: { id: string; icon: React.ElementType; title: string; descriptio
     icon: Battery,
     title: "Batteriespeicher",
     description: "Nutzen Sie Ihren selbst produzierten Solarstrom rund um die Uhr. Mit modernsten Speichersystemen erhöhen Sie Ihren Eigenverbrauch drastisch.",
-    image: "/Byd.png",
+    image: "/Byd.webp",
     Content: BatteryContent,
   },
   {
@@ -30,7 +30,7 @@ const services: { id: string; icon: React.ElementType; title: string; descriptio
     icon: Cable,
     title: "Wallboxen",
     description: "Tanken Sie die Sonne. Wir installieren intelligente Ladestationen für Ihr Elektroauto - sicher, schnell und perfekt, egal ob mit oder ohne PV Anlage.",
-    image: "/neu-wallbox.png",
+    image: "/neu-wallbox.webp",
     imageStyle: { objectPosition: "65% 63%" },
     imageClass: "scale-[1.2] group-hover:scale-[1.35]",
     Content: WallboxContent,
@@ -53,13 +53,13 @@ export default function Services() {
   };
 
   return (
-    <section id="leistungen" className="py-32 bg-slate-50 relative overflow-hidden">
+    <section id="leistungen" className="pt-10 pb-16 sm:py-24 lg:pt-20 lg:pb-32 bg-slate-50 relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-green-500/5 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-slate-200/50 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2 pointer-events-none" />
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-24">
+      <div className="container mx-auto px-5 sm:px-6 relative z-10">
+        <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16 lg:mb-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -69,17 +69,17 @@ export default function Services() {
             <span className="text-green-500 font-bold tracking-wider uppercase text-sm mb-4 block">
               Unsere Expertise
             </span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">
               Ihre Komplettlösung aus einer Hand
             </h2>
-            <div className="w-24 h-1 bg-green-500 mx-auto rounded-full mb-8" />
-            <p className="text-lg text-slate-600 leading-relaxed">
+            <div className="w-24 h-1 bg-green-500 mx-auto rounded-full mb-6 sm:mb-8" />
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
               Von der ersten Beratung bis zur finalen Installation – wir bieten Ihnen perfekt aufeinander abgestimmte Systeme für Ihre private Energiewende.
             </p>
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -90,7 +90,7 @@ export default function Services() {
               className="group bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-500 transform hover:-translate-y-2 border border-slate-100 cursor-pointer flex flex-col"
               onClick={() => setActiveModal(service.id)}
             >
-              <div className="relative h-64 overflow-hidden shrink-0">
+              <div className="relative h-52 sm:h-64 overflow-hidden shrink-0">
                 <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
                 <img
                   src={service.image}
@@ -103,11 +103,11 @@ export default function Services() {
                 </div>
               </div>
 
-              <div className="p-10 flex flex-col flex-grow">
-                <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-green-500 transition-colors">
+              <div className="p-6 sm:p-8 lg:p-10 flex flex-col flex-grow">
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 sm:mb-4 group-hover:text-green-500 transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-slate-600 leading-relaxed mb-8 flex-grow">
+                <p className="text-slate-600 leading-relaxed mb-6 sm:mb-8 flex-grow">
                   {service.description}
                 </p>
                 
