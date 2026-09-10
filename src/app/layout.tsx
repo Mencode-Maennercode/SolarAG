@@ -161,6 +161,28 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {/* Matomo Analytics, selbst gehostet auf matomo.praesenzwert.de.
+            disableCookies() macht das Tracking cookie-los (TTDSG §25 greift
+            nur bei Zugriff auf Endgeraete-Speicher) - dadurch ist kein
+            Consent-Banner noetig. IP-Anonymisierung ist serverseitig aktiv. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){
+if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') return;
+var _paq = window._paq = window._paq || [];
+_paq.push(['disableCookies']);
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+  var u="https://matomo.praesenzwert.de/";
+  _paq.push(['setTrackerUrl', u+'matomo.php']);
+  _paq.push(['setSiteId', '3']);
+  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+  g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+})();
+})();`,
+          }}
+        />
       </head>
       <body className={`${inter.className} bg-slate-50 text-slate-900 antialiased`}>
         <Navbar />

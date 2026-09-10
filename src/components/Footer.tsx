@@ -1,13 +1,27 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import LegalModal from "./LegalModal";
 
 export default function Footer() {
   const [openModal, setOpenModal] = useState<"impressum" | "datenschutz" | null>(null);
+  const [matomoAbgemeldet, setMatomoAbgemeldet] = useState(false);
 
   const closeModal = () => setOpenModal(null);
+
+  useEffect(() => {
+    const paq = (window as { _paq?: unknown[] })._paq;
+    if (Array.isArray(paq)) {
+      paq.push(["isUserOptedOut", (v: boolean) => setMatomoAbgemeldet(v)]);
+    }
+  }, []);
+
+  function matomoUmschalten() {
+    const paq = ((window as { _paq?: unknown[] })._paq ??= []);
+    paq.push([matomoAbgemeldet ? "forgetUserOptOut" : "optUserOut"]);
+    setMatomoAbgemeldet(!matomoAbgemeldet);
+  }
 
   return (
     <footer className="bg-slate-900 text-slate-300 py-12 px-6">
@@ -169,7 +183,34 @@ export default function Footer() {
         </section>
 
         <section>
-          <h3 className="font-semibold text-slate-900 mb-1">5. Ihre Rechte</h3>
+          <h3 className="font-semibold text-slate-900 mb-1">5. Reichweitenmessung mit Matomo (ohne Cookies)</h3>
+          <p>
+            Diese Website nutzt den Webanalysedienst Matomo zur Auswertung anonymisierter
+            Besucherstatistiken. Matomo läuft ausschließlich auf unserem eigenen Server
+            (matomo.praesenzwert.de) – es werden keine Daten an Dritte übertragen. Das Tracking
+            ist datensparsam eingerichtet: Es werden keine Cookies gesetzt, und Ihre IP-Adresse
+            wird vor der Speicherung anonymisiert. Da weder Cookies gesetzt noch anderweitig auf
+            Ihrem Endgerät gespeicherte Informationen ausgelesen werden, ist nach § 25 TTDSG keine
+            Einwilligung erforderlich. Rechtsgrundlage ist unser berechtigtes Interesse an einer
+            bedarfsgerechten Gestaltung unserer Website (Art. 6 Abs. 1 lit. f DSGVO).
+          </p>
+          <p>
+            Sie können der Verarbeitung jederzeit widersprechen (Art. 21 DSGVO), mit
+            Wirkung für die Zukunft:{" "}
+            <button
+              type="button"
+              onClick={matomoUmschalten}
+              className="inline-flex min-h-11 items-center underline underline-offset-4"
+            >
+              {matomoAbgemeldet ? "Zählung wieder zulassen" : "Der Zählung widersprechen"}
+            </button>
+            . Diese Entscheidung merkt sich Ihr Browser in einem kleinen, technisch
+            dafür notwendigen Speicherwert.
+          </p>
+        </section>
+
+        <section>
+          <h3 className="font-semibold text-slate-900 mb-1">6. Ihre Rechte</h3>
           <p>
             Sie haben im Rahmen der gesetzlichen Bestimmungen jederzeit das Recht auf Auskunft über
             Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten sowie ggf.
@@ -179,7 +220,7 @@ export default function Footer() {
         </section>
 
         <section>
-          <h3 className="font-semibold text-slate-900 mb-1">6. SSL-/TLS-Verschlüsselung</h3>
+          <h3 className="font-semibold text-slate-900 mb-1">7. SSL-/TLS-Verschlüsselung</h3>
           <p>
             Diese Website nutzt aus Sicherheitsgründen eine SSL-/TLS-Verschlüsselung. Eine
             verschlüsselte Verbindung erkennen Sie an dem Schloss-Symbol in der Adresszeile Ihres
